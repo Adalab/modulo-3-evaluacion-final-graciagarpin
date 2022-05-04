@@ -1,0 +1,9 @@
+.list {
+  list-style: none;
+}
+
+.card {
+    &__poster {
+      width: 100px;
+    }
+}
