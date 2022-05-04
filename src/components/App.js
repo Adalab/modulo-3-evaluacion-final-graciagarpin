@@ -1,6 +1,7 @@
 import '../styles/App.scss';
 import getApiData from '../services/api';
 import { useEffect, useState } from 'react';
+import MovieSceneList from "./MovieSceneList";
 
 function App() {
 
@@ -42,6 +43,7 @@ function App() {
             <option> </option>
           </select>
         </form>
+        <MovieSceneList wowData={wowData}/>
       </main>
     </div>
   );
