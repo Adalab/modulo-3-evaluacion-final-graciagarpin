@@ -3,7 +3,7 @@ import MovieSceneCard from "./MovieSceneCard";
 const MovieSceneList = (props) => {
 
  const movieCards = props.wowData.map((card) =>{
-   return (<li className="list__card">
+   return (<li className="list__item">
      <MovieSceneCard card={card}/>
    </li>
    )
