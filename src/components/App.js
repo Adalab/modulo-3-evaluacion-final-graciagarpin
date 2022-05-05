@@ -9,7 +9,7 @@ function App() {
   const [wowData, setwowData] = useState([]);
   const [searchedMovie, setSearchedMovie] = useState('');
   //creo una const del estado del array de years
-  const [selectedYear, setSelectedYear] = useState('Select a year');
+  const [selectedYear, setSelectedYear] = useState('All');
 
   useEffect(() => {
     getApiData().then((wowData) => {
@@ -29,17 +29,20 @@ function App() {
     if (searchedMovie === '') {
       return true;
     } else {
-      return card.movie.toLowerCase().includes(searchedMovie.toLowerCase());
+      return card.movie.toLowerCase().includes(searchedMovie.sort().toLowerCase());
     }
   });
+  // if () seletedYear === All, return true else{ props.value.year === card.year}
+  const filteredYears = wowData.filter((card) => {});
 
   const getYears = () => {
     const movieYears = wowData.map((year) => year.year);
     const unrepeatedYear = movieYears.filter((year, index) => {
-      // iguala las posicines: si existe ya posición para ese año tendrá registrado que la posición de ese año es otra distinta a la actual (index) y entonces no cumple la iguadad y no retorna ese año
       return movieYears.indexOf(year) === index;
     });
-    return unrepeatedYear;
+    
+    console.log(typeof unrepeatedYear);
+    return unrepeatedYear
   };
 
   return (

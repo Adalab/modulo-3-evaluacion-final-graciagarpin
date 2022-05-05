@@ -1,11 +1,11 @@
 const FilterYear = (props) => {
   const handleSelect = (ev) => {
-    props.handleSelecteddYear(ev.currentTarget.value);
+    props.handleSelecteddYear(ev.target.value);
   };
 
   const renderYears = () => {
     return props.years.sort().map((year, index) => {
-      return <option key={index}>{year}</option>;
+      return <option key={index} value={year}>{year}</option>;
     });
   };
 
@@ -20,7 +20,6 @@ const FilterYear = (props) => {
         value={props.selectedYear}
         onChange={handleSelect}
       >
-        <option>Select a year</option>
         <option>All</option>
         <>{renderYears()}</>
       </select>
