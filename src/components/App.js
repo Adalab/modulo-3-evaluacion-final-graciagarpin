@@ -9,7 +9,7 @@ function App() {
   const [wowData, setwowData] = useState([]);
   const [searchedMovie, setSearchedMovie] = useState('');
   //creo una const del estado del array de years
-  const [selectedYear, setSelectedYear] = useState('All');
+  const [selectedYear, setSelectedYear] = useState('Select a year');
 
   useEffect(() => {
     getApiData().then((wowData) => {

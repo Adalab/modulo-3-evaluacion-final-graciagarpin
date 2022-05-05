@@ -20,6 +20,7 @@ const FilterYear = (props) => {
         value={props.selectedYear}
         onChange={handleSelect}
       >
+        <option>Select a year</option>
         <option>All</option>
         <>{renderYears()}</>
       </select>
