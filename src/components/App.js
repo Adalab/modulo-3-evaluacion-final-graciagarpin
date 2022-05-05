@@ -20,9 +20,13 @@ function App() {
     setSearchedMovie(value);
   };
 
-  const filteredMovies = wowData.filter((movie) =>{
-    return movie.movie === searchedMovie;
-  }) 
+  const filteredMovies = wowData.filter((card) =>{
+    if (searchedMovie === ''){
+      return true;
+    }else{
+      return card.movie.toLowerCase().includes(searchedMovie.toLowerCase());
+    }
+  });
 
   return (
     <div>
@@ -34,7 +38,7 @@ function App() {
           handleSearchedMovie={handleSearchedMovie}
           searchedMovie={searchedMovie}
         />
-        <MovieSceneList wowData={wowData} />
+        <MovieSceneList filteredMovies={filteredMovies} />
       </main>
     </div>
   );

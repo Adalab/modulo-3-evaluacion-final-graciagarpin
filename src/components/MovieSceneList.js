@@ -3,7 +3,7 @@ import '../styles/core/_reset.scss';
 
 const MovieSceneList = (props) => {
 
- const movieCards = props.wowData.map((card, index) =>{
+ const movieCards = props.filteredMovies.map((card, index) =>{
    return (<li key={index} className="list__item">
      <MovieSceneCard card={card}/>
    </li>
