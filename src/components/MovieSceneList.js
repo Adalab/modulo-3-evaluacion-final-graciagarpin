@@ -3,8 +3,8 @@ import '../styles/core/_reset.scss';
 
 const MovieSceneList = (props) => {
 
- const movieCards = props.wowData.map((card) =>{
-   return (<li className="list__item">
+ const movieCards = props.wowData.map((card, index) =>{
+   return (<li key={index} className="list__item">
      <MovieSceneCard card={card}/>
    </li>
    )
