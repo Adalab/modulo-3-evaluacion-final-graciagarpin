@@ -1,4 +1,5 @@
 import '../styles/App.scss';
+import '../styles/core/_reset.scss';
 import getApiData from '../services/api';
 import { useEffect, useState } from 'react';
 import MovieSceneList from "./MovieSceneList";
@@ -20,7 +21,7 @@ function App() {
   return (
     <div>
       <header>
-        <h1>Owen Wilson's "WoW"</h1>
+        <h1 className='title'>Owen Wilson's "WoW"</h1>
       </header>
       <main>
         <form action="">

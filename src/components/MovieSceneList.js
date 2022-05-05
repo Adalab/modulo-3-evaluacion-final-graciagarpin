@@ -1,4 +1,5 @@
 import MovieSceneCard from "./MovieSceneCard";
+import '../styles/core/_reset.scss';
 
 const MovieSceneList = (props) => {
 

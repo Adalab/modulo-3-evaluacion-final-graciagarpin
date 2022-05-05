@@ -1,3 +1,5 @@
+import '../styles/core/_reset.scss';
+
 const MovieSceneCard = (props) => {
   return (
     <article className="card"> 
