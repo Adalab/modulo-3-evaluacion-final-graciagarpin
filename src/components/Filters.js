@@ -8,7 +8,10 @@ const Filters = (props) => {
         handleSearchedMovie={props.handleSearchedMovie}
         searchedMovie={props.searchedMovie}
       />
-      <FilterYear />
+      <FilterYear
+        handleSelecteddYear={props.handleSelecteddYear}
+        years={props.years}
+      />
     </form>
   );
 };
