@@ -3,6 +3,7 @@ import '../styles/core/_reset.scss';
 import getApiData from '../services/api';
 import { useEffect, useState } from 'react';
 import MovieSceneList from "./MovieSceneList";
+import Filters from "./Filters";
 
 function App() {
 
@@ -24,26 +25,7 @@ function App() {
         <h1 className='title'>Owen Wilson's "WoW"</h1>
       </header>
       <main>
-        <form action="">
-          <label htmlFor="movieInput">Movie</label>
-          <input
-            type="text"
-            name="movieInput"
-            id="movieInput"
-            className="movieInput"
-            autoComplete="off"
-            placeholder="Little Fockers"
-          />
-          <label htmlFor="yearSelect">Year</label>
-          <select
-            type="select"
-            name="yearSelect"
-            id="yearSelect"
-            className="yearSelect"
-          >
-            <option> </option>
-          </select>
-        </form>
+        <Filters />
         <MovieSceneList wowData={wowData}/>
       </main>
     </div>
