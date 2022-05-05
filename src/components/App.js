@@ -7,7 +7,7 @@ import Filters from './Filters';
 
 function App() {
   const [wowData, setwowData] = useState([]);
-  const [filterMovie, setFilterMovie] = useState('');
+  const [SearchedMovie, setSearchedMovie] = useState('');
 
   useEffect(() => {
     getApiData().then((wowData) => {
@@ -16,9 +16,13 @@ function App() {
     });
   }, []);
 
-  const handleFilterMovie = (value) => {
-    setFilterMovie(value);
+  const handleSearchedMovie = (value) => {
+    setSearchedMovie(value);
   };
+
+  const filteredMovies = wowData.filter((movie) =>{
+    return movie.movie === SearchedMovie;
+  }) 
 
   return (
     <div>
@@ -27,8 +31,8 @@ function App() {
       </header>
       <main>
         <Filters
-          handleFilterMovie={handleFilterMovie}
-          filterMovie={filterMovie}
+          handleSearchedMovie={handleSearchedMovie}
+          SearchedMovie={SearchedMovie}
         />
         <MovieSceneList wowData={wowData} />
       </main>

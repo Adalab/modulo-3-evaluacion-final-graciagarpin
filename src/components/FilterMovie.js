@@ -1,6 +1,6 @@
 const FilterMovie = (props) => {
   const handleInput = (ev) => {
-    props.handleFilterMovie(ev.target.value);
+    props.handleSearchedMovie(ev.target.value);
   };
 
   return (
@@ -13,7 +13,7 @@ const FilterMovie = (props) => {
         className="movieInput"
         autoComplete="off"
         placeholder="Little Fockers"
-        value={props.filterMovie}
+        value={props.SearchedMovie}
         onChange={handleInput}
       />
     </>
