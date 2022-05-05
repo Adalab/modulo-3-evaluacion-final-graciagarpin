@@ -1,4 +1,4 @@
-const FilterByMovieYear = () => {
+const FilterYear = (props) => {
   return (
     <>
       <label htmlFor="yearSelect">Year</label>
@@ -14,4 +14,4 @@ const FilterByMovieYear = () => {
   );
 };
 
-export default FilterByMovieYear;
+export default FilterYear;

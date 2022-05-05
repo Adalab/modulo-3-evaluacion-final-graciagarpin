@@ -1,11 +1,14 @@
-import FilterByMovieScene from './FilterByMovieScene';
-import FilterByMovieYear from './FilterByMovieYear';
+import FilterMovie from './FilterMovie';
+import FilterYear from './FilterYear';
 
-const Filters = () => {
+const Filters = (props) => {
   return (
     <form action="">
-      <FilterByMovieScene />
-      <FilterByMovieYear />
+      <FilterMovie
+        handleFilterMovie={props.handleFilterMovie}
+        filterMovie={props.filterMovie}
+      />
+      <FilterYear />
     </form>
   );
 };

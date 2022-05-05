@@ -1,4 +1,8 @@
-const FilterByMovieScene = (props) => {
+const FilterMovie = (props) => {
+  const handleInput = (ev) => {
+    props.handleFilterMovie(ev.target.value);
+  };
+
   return (
     <>
       <label htmlFor="movieInput">Movie</label>
@@ -9,9 +13,11 @@ const FilterByMovieScene = (props) => {
         className="movieInput"
         autoComplete="off"
         placeholder="Little Fockers"
+        value={props.filterMovie}
+        onChange={handleInput}
       />
     </>
   );
 };
 
-export default FilterByMovieScene;
+export default FilterMovie;
