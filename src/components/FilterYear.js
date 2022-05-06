@@ -5,9 +5,6 @@ const FilterYear = (props) => {
     props.handleSelecteddYear(valueSelected);
   };
 
-  // props.filteredYears()
-
-  //render en el select
   const renderYearsInSelect = () => {
     return props.years.sort().map((year, index) => {
       return <option key={index} value={year}>{year}</option>;

@@ -13,7 +13,7 @@ const FilterMovie = (props) => {
         className="movieInput"
         autoComplete="off"
         placeholder="Little Fockers"
-        value={props.setSearchedMovie}
+        value={props.searchedMovie}
         onChange={handleInput}
       />
     </>
