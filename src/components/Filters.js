@@ -6,7 +6,7 @@ const Filters = (props) => {
     <form action="">
       <FilterMovie
         handleSearchedMovie={props.handleSearchedMovie}
-        searchedMovie={props.searchedMovie}
+        setSearchedMovie={props.setSearchedMovie}
       />
       <FilterYear
         handleSelecteddYear={props.handleSelecteddYear}
