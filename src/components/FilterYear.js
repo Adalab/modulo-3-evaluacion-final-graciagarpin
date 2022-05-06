@@ -1,9 +1,14 @@
 const FilterYear = (props) => {
+  
   const handleSelect = (ev) => {
-    props.handleSelecteddYear(ev.target.value);
+    const valueSelected = ev.target.value;
+    props.handleSelecteddYear(valueSelected);
   };
 
-  const renderYears = () => {
+  // props.filteredYears()
+
+  //render en el select
+  const renderYearsInSelect = () => {
     return props.years.sort().map((year, index) => {
       return <option key={index} value={year}>{year}</option>;
     });
@@ -21,7 +26,7 @@ const FilterYear = (props) => {
         onChange={handleSelect}
       >
         <option>All</option>
-        <>{renderYears()}</>
+        <>{renderYearsInSelect()}</>
       </select>
     </>
   );
