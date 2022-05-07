@@ -7,7 +7,7 @@ const FilterMovie = (props) => {
     <>
       <label htmlFor="movieInput">Movie</label>
       <input
-        type="text"
+        type="search"
         name="movieInput"
         id="movieInput"
         className="movieInput"
