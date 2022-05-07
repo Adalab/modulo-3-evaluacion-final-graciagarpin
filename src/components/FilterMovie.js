@@ -5,17 +5,21 @@ const FilterMovie = (props) => {
 
   return (
     <>
-      <label htmlFor="movieInput">Movie</label>
-      <input
-        type="search"
-        name="movieInput"
-        id="movieInput"
-        className="movieInput"
-        autoComplete="off"
-        placeholder="Little Fockers"
-        value={props.searchedMovie}
-        onChange={handleInput}
-      />
+      <section className="form__input">
+        <label htmlFor="movieInput" className="form__input__label">
+          Movie
+        </label>
+        <input
+          type="search"
+          name="movieInput"
+          id="movieInput"
+          className="movieInput"
+          autoComplete="off"
+          placeholder="Hey, search, Little Focker!"
+          value={props.searchedMovie}
+          onChange={handleInput}
+        />
+      </section>
     </>
   );
 };
