@@ -1,0 +1,15 @@
+.list {
+  padding: 20px;
+  height: 100vh;
+  display: grid;
+  place-items: center center;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap:40px;
+  
+  &__message {
+    padding: 20px;
+    font-family: 'Anton', sans-serif;
+    font-size: 25px;
+    color: red;
+  }
+}

@@ -1,14 +1,7 @@
 .title {
-  font-weight: bold;
-  font-size:xx-large;
-}
-
-.list {
-  list-style: none;
-}
-
-.card {
-    &__poster {
-      width: 100px;
-    }
+  font-family: 'Bangers';
+  font-size: 3em;
+  display: block;
+  padding: 20px;
+  text-align: center;
 }

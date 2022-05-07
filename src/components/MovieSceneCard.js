@@ -1,6 +1,6 @@
 import '../styles/core/_reset.scss';
 import '../styles/layout/_card.scss';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const MovieSceneCard = (props) => {
   return (
@@ -12,10 +12,12 @@ const MovieSceneCard = (props) => {
           alt={props.card.movie}
           title="movie poster"
         />
-        <h4 className="card__title">
-          {props.card.movie} - {props.card.year}
-        </h4>
-        <p className="card__quote">{props.card.full_line}</p>
+        <div className="desciption">
+          <h4 className="desciption__title">
+            {props.card.movie} - {props.card.year}
+          </h4>
+          <p className="desciption__title--quote">{props.card.full_line}</p>
+        </div>
       </article>
     </Link>
   );
