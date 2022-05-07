@@ -1,4 +1,5 @@
 //https://owen-wilson-wow-api.herokuapp.com/wows/random?results=50
+import {v4 as uuidv4} from 'uuid';
 
 const getApiData = () => {
   return fetch(
@@ -14,6 +15,7 @@ const getApiData = () => {
           year: item.year,
           director: item.director,
           audio: item.audio,
+          uuid: uuidv4()
         };
       });
       return cleanedData;
