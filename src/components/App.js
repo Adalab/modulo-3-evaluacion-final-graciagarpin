@@ -20,6 +20,16 @@ function App() {
     });
   }, []);
 
+  function orderAlphabeticallyByMovie(a, b) {
+    if (a.movie < b.movie) {
+      return -1;
+    }
+    if (a.movie > b.movie) {
+      return 1;
+    }
+    return 0;
+  }
+
   const handleSearchedMovie = (value) => {
     setSearchedMovie(value);
   };
@@ -39,7 +49,8 @@ function App() {
       } else {
         return selectedYear.includes(card.year);
       }
-    });
+    })
+    .sort(orderAlphabeticallyByMovie);
 
   const handleSelecteddYear = (value) => {
     setSelectedYear(value);
