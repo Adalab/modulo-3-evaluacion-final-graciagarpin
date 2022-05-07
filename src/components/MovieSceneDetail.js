@@ -1,5 +1,8 @@
 import '../styles/core/_reset.scss';
 import '../styles/layout/_detail.scss';
+import { BiMoviePlay, BiCameraMovie } from 'react-icons/bi';
+import { GiDirectorChair } from 'react-icons/gi';
+import { AiOutlineAudio } from 'react-icons/ai';
 
 const MovieSceneDetail = (props) => {
   console.log(props);
@@ -13,11 +16,20 @@ const MovieSceneDetail = (props) => {
           title="movie poster"
         />
         <div className="detail__description">
-          <h2 className="description__movie">{props.scene.movie}</h2>
-          <p className="description__info">{`"${props.scene.full_line}"`}</p>
-          <p className="description__info">{props.scene.director}</p>
+          <h2 className="description__movie">
+            {' '}
+            <BiCameraMovie /> {props.scene.movie}
+          </h2>
+          <p className="description__info">
+            {' '}
+            <BiMoviePlay /> {`"${props.scene.full_line}"`}
+          </p>
+          <p className="description__info">
+            {' '}
+            <GiDirectorChair /> {props.scene.director}
+          </p>
           <a className="description__audio" href={props.scene.audio}>
-            Escuchar audio
+            <AiOutlineAudio /> Escuchar audio
           </a>
         </div>
       </section>
