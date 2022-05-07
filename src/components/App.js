@@ -12,7 +12,6 @@ function App() {
   const [wowData, setwowData] = useState([]);
   const [searchedMovie, setSearchedMovie] = useState('');
   const [selectedYear, setSelectedYear] = useState('All');
-  console.log(selectedYear);
 
   useEffect(() => {
     getApiData().then((wowData) => {
@@ -24,7 +23,6 @@ function App() {
   const handleSearchedMovie = (value) => {
     setSearchedMovie(value);
   };
-  console.log(searchedMovie);
   const filteredMovies = wowData
     .filter((card) => {
       if (searchedMovie === '') {
