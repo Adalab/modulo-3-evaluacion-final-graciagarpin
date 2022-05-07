@@ -78,7 +78,7 @@ function App() {
               <>
                 <Filters
                   handleSearchedMovie={handleSearchedMovie}
-                  setSearchedMovie={setSearchedMovie}
+                  searchedMovie={searchedMovie}
                   handleSelecteddYear={handleSelecteddYear}
                   selectedYear={selectedYear}
                   years={getYears()}

@@ -9,7 +9,7 @@ const Filters = (props) => {
     <form action="" onSubmit={handleSubmit}>
       <FilterMovie
         handleSearchedMovie={props.handleSearchedMovie}
-        setSearchedMovie={props.setSearchedMovie}
+        searchedMovie={props.searchedMovie}
       />
       <FilterYear
         handleSelecteddYear={props.handleSelecteddYear}
