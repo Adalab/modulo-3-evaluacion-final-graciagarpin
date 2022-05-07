@@ -14,7 +14,9 @@ const MovieSceneDetail = (props) => {
       <h2 className="detail__movie">{props.scene.movie}</h2>
       <p className="detail__info">{props.scene.full_line}</p>
       <p className="detail__info">{props.scene.director}</p>
-      <audio src={props.scene.audio}></audio>
+      <a className="detail__audioLink" href={props.scene.audio}>
+        Escuchar audio
+      </a>
     </section>
   );
 };
