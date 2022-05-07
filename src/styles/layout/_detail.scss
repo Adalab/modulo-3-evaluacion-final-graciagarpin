@@ -1,0 +1,30 @@
+.page{
+  padding: 20px;
+
+}
+
+.detail{
+  background-color: yellowgreen;
+  border-radius: 20px ;
+  padding: 20px;
+  font-family: 'Anton', sans-serif;
+  display: grid;
+  place-items:center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  // grid-gap:40px;
+  &__poster{
+     width: 50%;
+    border-radius: 20px ;
+
+  }
+  .description{
+    padding: 10px;
+    &__movie{
+      font-size: 2em;
+      color: whitesmoke;
+    }
+    &__audio{
+      
+    }
+  }
+}
