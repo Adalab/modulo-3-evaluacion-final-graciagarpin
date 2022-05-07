@@ -13,9 +13,7 @@ const Filters = (props) => {
       />
       <FilterYear
         handleSelecteddYear={props.handleSelecteddYear}
-        
         selectedYear={props.selectedYear}
-
         years={props.years}
       />
     </form>

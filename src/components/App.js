@@ -1,8 +1,8 @@
 import '../styles/App.scss';
 import '../styles/core/_reset.scss';
-import {Route, Routes} from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import {matchPath, useLocation} from 'react-router'
+import { matchPath, useLocation } from 'react-router';
 import getApiData from '../services/api';
 import MovieSceneList from './MovieSceneList';
 import MovieSceneDetail from './MovieSceneDetail';
@@ -30,7 +30,9 @@ function App() {
       if (searchedMovie === '') {
         return true;
       } else {
-        return card.movie.toLowerCase().includes(searchedMovie.toLowerCase().trim());
+        return card.movie
+          .toLowerCase()
+          .includes(searchedMovie.toLowerCase().trim());
       }
     })
     .filter((card) => {
@@ -54,7 +56,7 @@ function App() {
   };
 
   // RUTES:
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
   //guardo toda la info de una ruta en la const dataPath y esa info me la da el método matchPath
   const dataPath = matchPath('/scene/:sceneId', pathname);
   console.log(dataPath);
@@ -88,8 +90,9 @@ function App() {
             }
           />
           {/* ruta dinámica */}
-          <Route path='/scene/:sceneId'
-          element={<MovieSceneDetail scene={sceneFound} />}
+          <Route
+            path="/scene/:sceneId"
+            element={<MovieSceneDetail scene={sceneFound} />}
           />
         </Routes>
       </main>
