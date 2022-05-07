@@ -16,7 +16,7 @@ const MovieSceneCard = (props) => {
           <h4 className="desciption__title">
             {props.card.movie} - {props.card.year}
           </h4>
-          <p className="desciption__title--quote">{props.card.full_line}</p>
+          <p className="desciption__title--quote">{`"${props.card.full_line}"`}</p>
         </div>
       </article>
     </Link>

@@ -11,7 +11,7 @@
   display: grid;
   place-items:center;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  // grid-gap:40px;
+
   &__poster{
      width: 50%;
     border-radius: 20px ;
@@ -21,10 +21,15 @@
     padding: 10px;
     &__movie{
       font-size: 2em;
-      color: whitesmoke;
+      padding-bottom: 20px;
+      color: whitesmoke 
+    }
+
+    &__info{
+      padding-bottom: 20px;
     }
     &__audio{
-      
+      text-decoration:underline;
     }
   }
 }
