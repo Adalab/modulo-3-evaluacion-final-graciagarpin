@@ -13,7 +13,7 @@ const FilterMovie = (props) => {
           type="search"
           name="movieInput"
           id="movieInput"
-          className="movieInput"
+          className="form__input__movieInput"
           autoComplete="off"
           placeholder="Hey, search, Little Focker!"
           value={props.searchedMovie}
