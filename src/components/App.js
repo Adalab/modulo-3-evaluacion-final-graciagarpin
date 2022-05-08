@@ -7,6 +7,7 @@ import getApiData from '../services/api';
 import MovieSceneList from './MovieSceneList';
 import MovieSceneDetail from './MovieSceneDetail';
 import Filters from './Filters';
+import objectToExport from '../services/localStorage';
 
 function App() {
   const [wowData, setwowData] = useState([]);
@@ -72,8 +73,12 @@ function App() {
 
   const sceneId = dataPath !== null ? dataPath.params.sceneId : null;
 
-  const sceneFound = wowData.find((item) => item.uuid === sceneId);
-  console.log(sceneFound);
+  const sceneFound = objectToExport.get(sceneId, '') // aqui
+
+  objectToExport.clear();
+
+  //  sceneFound = wowData.find((item) => item.uuid === sceneId);
+  // console.log(sceneFound);
 
   return (
     <div>

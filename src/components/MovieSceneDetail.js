@@ -3,8 +3,12 @@ import '../styles/layout/_detail.scss';
 import { BiMoviePlay, BiCameraMovie } from 'react-icons/bi';
 import { GiDirectorChair } from 'react-icons/gi';
 import { MdOutlineAudiotrack } from 'react-icons/md';
+import objectToExport from '../services/localStorage';
 
 const MovieSceneDetail = (props) => {
+
+    objectToExport.set(props.scene.uuid, props.scene);  //aqui
+  
   console.log(props);
   return (
     <div className="page">
