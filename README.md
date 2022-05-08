@@ -13,7 +13,7 @@ npm install -g create-react-app
 
 Una vez hemos instalado React de manera global, instala las dependencias y React Route Dom con los siguientes comandos:
 
-npm install
+npm install  
 npm install react-router-dom
 
 📌Objetivos del ejercicio:  
@@ -27,7 +27,7 @@ Para eso, utilizamos el servicio de https://owen-wilson-wow-api.herokuapp.com/wo
 Puedes ingresar a la página oficial del Api en el siguiente enlace https://owen-wilson-wowapi.herokuapp.com/
 
 2. Filtrado por película  
-Ya tenemos el listado de escenas, realizamos un filtro para buscar por película. Para eso, añadimos un input a la interfaz, de forma que al ir escribiendo un nombre queden en la interfaz solo las escenas cuya película contiene las letras escritas.
+Ya tenemos el listado de escenas, realizamos un filtro para buscar por película.  Para eso, añadimos un input a la interfaz, de forma que al ir escribiendo un nombre queden en la interfaz solo las escenas cuya película contiene las letras escritas.
 
 3. Filtrado por año  
 Filtramos el listado por año de la película.  
