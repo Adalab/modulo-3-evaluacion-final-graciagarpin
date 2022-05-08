@@ -34,7 +34,7 @@ const MovieSceneDetail = (props) => {
           <a className="description__audio" href={props.scene.audio}>
             {' '}
             <MdOutlineAudiotrack />
-            Listen audio
+            Listen to audio
           </a>
         </div>
       </section>
