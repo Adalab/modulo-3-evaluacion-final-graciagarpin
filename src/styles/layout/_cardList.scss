@@ -7,7 +7,9 @@
   grid-gap:40px;
   
   &__message {
-    padding: 20px;
+    display: grid;
+    place-items: center center;
+    padding: 50px;
     font-family: 'Anton', sans-serif;
     font-size: 25px;
     color: red;

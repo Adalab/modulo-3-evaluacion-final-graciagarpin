@@ -5,7 +5,7 @@ import '../styles/layout/_cardList.scss';
 const MovieSceneList = (props) => {
   if (props.filteredMovies.length === 0) {
     return (
-      <h2 className="list__message"> no hay resultados para su búsqueda </h2>
+      <h2 className="list__message"> No hay resultados para su búsqueda </h2>
     );
   }
   const movieCards = props.filteredMovies.map((card, index) => {
