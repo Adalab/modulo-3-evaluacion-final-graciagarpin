@@ -15,7 +15,7 @@ const FilterMovie = (props) => {
           id="movieInput"
           className="form__input__movieInput"
           autoComplete="off"
-          placeholder="Hey, search, Little Focker!"
+          placeholder="Hey, search Little Fockers!"
           value={props.searchedMovie}
           onChange={handleInput}
         />
