@@ -31,8 +31,11 @@ const MovieSceneDetail = (props) => {
             <GiDirectorChair />
             Director: {props.scene.director}
           </p>
-          <a className="description__audio" href={props.scene.audio}>
-            {' '}
+          <a
+            className="description__audio"
+            target="_blank"
+            href={props.scene.audio}
+          >
             <MdOutlineAudiotrack />
             Listen to audio
           </a>
