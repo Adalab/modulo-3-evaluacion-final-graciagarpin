@@ -12,13 +12,14 @@ function App() {
   const [wowData, setwowData] = useState([]);
   const [searchedMovie, setSearchedMovie] = useState('');
   const [selectedYear, setSelectedYear] = useState('All');
+  const [number, setNumber] = useState(50);
 
   useEffect(() => {
-    getApiData().then((wowData) => {
+    getApiData(number).then((wowData) => {
       console.log(wowData);
       setwowData(wowData);
     });
-  }, []);
+  }, [number]);
 
   function orderAlphabeticallyByMovie(a, b) {
     if (a.movie < b.movie) {
@@ -33,6 +34,10 @@ function App() {
   const handleSearchedMovie = (value) => {
     setSearchedMovie(value);
   };
+  const handleSelecteddYear = (value) => {
+    setSelectedYear(value);
+  };
+
   const filteredMovies = wowData
     .filter((card) => {
       if (searchedMovie === '') {
@@ -52,9 +57,6 @@ function App() {
     })
     .sort(orderAlphabeticallyByMovie);
 
-  const handleSelecteddYear = (value) => {
-    setSelectedYear(value);
-  };
 
   const getYears = () => {
     const movieYears = wowData.map((year) => year.year);
@@ -93,6 +95,8 @@ function App() {
                   handleSelecteddYear={handleSelecteddYear}
                   selectedYear={selectedYear}
                   years={getYears()}
+                  number={number}
+                  setNumber={setNumber}
                 />
                 <MovieSceneList filteredMovies={filteredMovies} />
               </>
