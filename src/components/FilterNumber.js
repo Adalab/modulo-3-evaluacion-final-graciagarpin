@@ -2,7 +2,7 @@ const FilterNumber = (props) => {
   const handleInput = (ev) => {
     props.setNumber(parseInt(ev.target.value));
   };
-parseInt()
+  parseInt();
   return (
     <>
       <section className="form__input">
