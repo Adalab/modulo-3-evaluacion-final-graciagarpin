@@ -6,7 +6,7 @@ parseInt()
   return (
     <>
       <section className="form__input">
-        <label htmlFor="number">
+        <label htmlFor="number" className="form__input__label">
           Number
         </label>
         <input
