@@ -6,11 +6,18 @@
   font-family: 'Anton', sans-serif;
   font-size: 1em;
   box-shadow: 7px 7px 15px darkolivegreen;
-
+    
+  &:hover {
+    background-color: black;
+    box-shadow: 9px 9px 18px black;
+    border: 5px solid black;
+    color: yellowgreen;
+  }
   &__poster {
     width: 100%;
     border-radius: 20px 20px 0 0;
   }
+  
 }
 
 .desciption{
