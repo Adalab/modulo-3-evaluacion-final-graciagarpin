@@ -24,7 +24,7 @@ const FilterYear = (props) => {
           type="select"
           name="yearSelect"
           id="yearSelect"
-          className="form__input__yearSelect"
+          className="form__input__movieInput"
           value={props.selectedYear}
           onChange={handleSelect}
         >
