@@ -7,6 +7,7 @@ import getApiData from '../services/api';
 import MovieSceneList from './MovieSceneList';
 import MovieSceneDetail from './MovieSceneDetail';
 import Filters from './Filters';
+import Header from './Header';
 
 function App() {
   const [wowData, setwowData] = useState([]);
@@ -79,9 +80,7 @@ function App() {
 
   return (
     <div>
-      <header>
-        <h1 className="title">Owen Wilson's "WoW"</h1>
-      </header>
+      < Header />
       <main>
         <Routes>
           {/* ruta estática */}
