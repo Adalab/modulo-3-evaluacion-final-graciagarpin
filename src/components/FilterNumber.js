@@ -13,7 +13,7 @@ const FilterNumber = (props) => {
           type="number"
           name="number"
           id="number"
-          class="form__input__movieInput"
+          className="form__input__movieInput"
           autoComplete="off"
           placeholder="Numero"
           value={props.number}
