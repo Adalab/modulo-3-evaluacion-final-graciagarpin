@@ -7,7 +7,7 @@ const FilterNumber = (props) => {
     <>
       <section className="form__input">
         <label htmlFor="number" className="form__input__label">
-          Number
+          Display
         </label>
         <input
           type="number"
