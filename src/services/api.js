@@ -1,9 +1,10 @@
-//https://owen-wilson-wow-api.herokuapp.com/wows/random?results=50
+//https://owen-wilson-wow-api.onrender.com/wows/random?results=50
+
 import {v4 as uuidv4} from 'uuid';
 
 const getApiData = (number) => {
   return fetch(
-    `https://owen-wilson-wow-api.herokuapp.com/wows/random?results=${number}`
+    `https://owen-wilson-wow-api.onrender.com/wows/random?results=${number}`
   )
     .then((response) => response.json())
     .then((data) => {
