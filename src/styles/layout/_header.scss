@@ -33,8 +33,9 @@
   color: transparent;
   background-color: #eff8e2;
   background-clip: text;
-  animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+  animation: shadows 1.2s ease-in, move 1.2s ease-in;
   letter-spacing: 0.4rem;
+  animation-iteration-count: 2;
 }
 
 @keyframes shadows {
